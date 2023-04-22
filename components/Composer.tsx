@@ -54,7 +54,7 @@ const expandPromptTemplate = (template: string, dict: object) => (inputValue: st
 const attachFileLegend =
   <Stack sx={{ p: 1, gap: 1, fontSize: '16px', fontWeight: 400 }}>
     <Box sx={{ mb: 1, textAlign: 'center' }}>
-      Attach a file to the message
+      Hänge eine Datei zu deiner Nachricht an
     </Box>
     <table>
       <tbody>
@@ -62,7 +62,7 @@ const attachFileLegend =
         <td width={36}><PictureAsPdfIcon sx={{ width: 24, height: 24 }} /></td>
         <td><b>PDF</b></td>
         <td width={36} align='center' style={{ opacity: 0.5 }}>→</td>
-        <td>📝 Text (split manually)</td>
+        <td>📝 Text</td>
       </tr>
       <tr>
         <td><DataArrayIcon sx={{ width: 24, height: 24 }} /></td>
@@ -74,18 +74,18 @@ const attachFileLegend =
         <td><FormatAlignCenterIcon sx={{ width: 24, height: 24 }} /></td>
         <td><b>Text</b></td>
         <td align='center' style={{ opacity: 0.5 }}>→</td>
-        <td>📝 As-is</td>
+        <td>📝 Text</td>
       </tr>
       </tbody>
     </table>
     <Box sx={{ mt: 1, fontSize: '14px' }}>
-      Drag & drop in chat for faster loads ⚡
+      Drag & Drop in den Chat für schnellere Ladezeiten ⚡
     </Box>
   </Stack>;
 
 const pasteClipboardLegend =
   <Box sx={{ p: 1, fontSize: '14px', fontWeight: 400 }}>
-    Converts Code and Tables to 📚 Markdown
+    Konvertiert Code & Tabellen zu 📚 Markdown
   </Box>;
 
 
@@ -368,8 +368,8 @@ export function Composer(props: {
   };
 
   const textPlaceholder: string = props.isDeveloperMode
-    ? 'Tell me what you need, add drop source files...'
-    : requireUserKeyProdia ? 'Type a message, or drop text files...' : 'Type, /imagine, or drop text files...';
+    ? 'Sag mir was du brauchst oder lade Source-Files hoch'
+    : requireUserKeyProdia ? 'Schreibe eine Nachricht' : 'Type, /imagine, or drop text files...';
 
   return (
     <Box sx={props.sx}>
@@ -395,7 +395,7 @@ export function Composer(props: {
               title={attachFileLegend}>
               <Button fullWidth variant='plain' color='neutral' onClick={handleShowFilePicker} startDecorator={<UploadFileIcon />}
                       sx={{ ...hideOnMobile, justifyContent: 'flex-start' }}>
-                Attach
+                Anhängen
               </Button>
             </Tooltip>
 
@@ -409,7 +409,7 @@ export function Composer(props: {
               title={pasteClipboardLegend}>
               <Button fullWidth variant='plain' color='neutral' startDecorator={<ContentPasteGoIcon />} onClick={handlePasteFromClipboard}
                       sx={{ ...hideOnMobile, justifyContent: 'flex-start' }}>
-                {props.isDeveloperMode ? 'Paste code' : 'Paste'}
+                {props.isDeveloperMode ? 'Code einfügen' : 'Einfügen'}
               </Button>
             </Tooltip>
 

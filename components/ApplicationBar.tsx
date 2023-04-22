@@ -210,19 +210,19 @@ export function ApplicationBar(props: {
 
       <MenuItem onClick={handleDarkModeToggle}>
         <ListItemDecorator><DarkModeIcon /></ListItemDecorator>
-        Dark
+        Dunkler Modus
         <Switch checked={colorMode === 'dark'} onChange={handleDarkModeToggle} sx={{ ml: 'auto' }} />
       </MenuItem>
 
       <MenuItem onClick={handleSystemMessagesToggle}>
         <ListItemDecorator><SettingsSuggestIcon /></ListItemDecorator>
-        System text
+        System Text
         <Switch checked={showSystemMessages} onChange={handleSystemMessagesToggle} sx={{ ml: 'auto' }} />
       </MenuItem>
 
       <MenuItem onClick={handleActionShowSettings}>
         <ListItemDecorator><SettingsOutlinedIcon /></ListItemDecorator>
-        Settings
+        Einstellungen
       </MenuItem>
 
       <ListDivider />
@@ -233,26 +233,26 @@ export function ApplicationBar(props: {
           <ExitToAppIcon />
           {/*</Badge>*/}
         </ListItemDecorator>
-        Share via paste.gg
+        Teilen via paste.gg
       </MenuItem>
 
       <MenuItem disabled={!props.conversationId || isConversationEmpty} onClick={handleConversationDownload}>
         <ListItemDecorator>
           <FileDownloadIcon />
         </ListItemDecorator>
-        Export conversation
+        Konversation exportieren
       </MenuItem>
 
       <ListDivider />
 
       <MenuItem disabled={!props.conversationId || isConversationEmpty} onClick={handleToggleMessageSelectionMode}>
         <ListItemDecorator>{props.isMessageSelectionMode ? <CheckBoxOutlinedIcon /> : <CheckBoxOutlineBlankOutlinedIcon />}</ListItemDecorator>
-        Select messages
+        Nachrichten auswählen
       </MenuItem>
 
       <MenuItem disabled={!props.conversationId || isConversationEmpty} onClick={handleConversationClear}>
         <ListItemDecorator><ClearIcon /></ListItemDecorator>
-        Clear conversation
+        Konversation leeren
       </MenuItem>
     </Menu>
 

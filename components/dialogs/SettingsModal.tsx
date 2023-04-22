@@ -450,10 +450,10 @@ export function SettingsModal({ open, onClose }: { open: boolean, onClose: () =>
 
             <FormControl orientation='horizontal' sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
               <Box>
-                <FormLabel>Language</FormLabel>
-                <Tooltip title='Not all browsers may support these languages. Please note that speech input is unavailable on iPhone/Safari.'>
+                <FormLabel>Sprache</FormLabel>
+                <Tooltip title='Nicht alle Browser unterstützen TTS. Nicht auf mobilen Endgeräten verfügbar'>
                   <FormHelperText>
-                    Speech input <InfoOutlinedIcon sx={{ mx: 0.5 }} />
+                    Für Text to Speech<InfoOutlinedIcon sx={{ mx: 0.5 }} />
                   </FormHelperText>
                 </Tooltip>
               </Box>
@@ -462,13 +462,13 @@ export function SettingsModal({ open, onClose }: { open: boolean, onClose: () =>
 
             <FormControl orientation='horizontal' sx={{ ...hideOnMobile, alignItems: 'center', justifyContent: 'space-between' }}>
               <Box>
-                <FormLabel>Centering</FormLabel>
+                <FormLabel>Ausrichtung</FormLabel>
                 <FormHelperText>{centerMode === 'full' ? 'Full screen' : centerMode === 'narrow' ? 'Narrow' : 'Wide'} chat</FormHelperText>
               </Box>
               <RadioGroup orientation='horizontal' value={centerMode} onChange={handleCenterModeChange}>
                 <Radio value='narrow' label={<WidthNormalIcon sx={{ width: 25, height: 24, mt: -0.25 }} />} />
                 <Radio value='wide' label={<WidthWideIcon sx={{ width: 25, height: 24, mt: -0.25 }} />} />
-                <Radio value='full' label='Full' />
+                <Radio value='full' label='Vollbild' />
               </RadioGroup>
             </FormControl>
 

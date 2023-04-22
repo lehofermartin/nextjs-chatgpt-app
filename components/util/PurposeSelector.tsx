@@ -138,10 +138,10 @@ export function PurposeSelector(props: { conversationId: string, runExample: (ex
 
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 2, mb: 1 }}>
           <Typography level='body2' color='neutral'>
-            Select an AI purpose
+            Wähle dein Fragengebiet:
           </Typography>
           <Button variant='plain' color='neutral' size='sm' onClick={toggleEditMode}>
-            {editMode ? 'Done' : 'Edit'}
+            {editMode ? 'Fertig' : 'Editieren'}
           </Button>
         </Box>
 
@@ -166,7 +166,7 @@ export function PurposeSelector(props: { conversationId: string, runExample: (ex
               >
                 {editMode && (
                   <Checkbox
-                    label={<Typography level='body2'>show</Typography>}
+                    label={<Typography level='body2'>Einblenden</Typography>}
                     checked={!hiddenPurposeIDs.includes(spId)} onChange={() => toggleHiddenPurposeId(spId)}
                     sx={{ alignSelf: 'flex-start' }}
                   />

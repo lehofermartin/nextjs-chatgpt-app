@@ -193,7 +193,7 @@ export function PagesMenu(props: { conversationId: string | null, pagesMenuAncho
       <MenuItem onClick={handleNew}>
         <ListItemDecorator><AddIcon /></ListItemDecorator>
         <Typography>
-          {NewPrefix}New
+          {NewPrefix}Neu
         </Typography>
       </MenuItem>
 
@@ -214,13 +214,13 @@ export function PagesMenu(props: { conversationId: string | null, pagesMenuAncho
         <ListItemDecorator>
           <FileUploadIcon />
         </ListItemDecorator>
-        Import conversation
+        Konversation importieren
       </MenuItem>
 
       <MenuItem disabled={!hasChats} onClick={handleDeleteAll}>
         <ListItemDecorator><DeleteOutlineIcon /></ListItemDecorator>
         <Typography>
-          Delete all
+          Alle Konversationen löschen
         </Typography>
       </MenuItem>
 
