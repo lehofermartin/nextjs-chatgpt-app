@@ -343,7 +343,7 @@ export function makeAvatar(messageAvatar: string | null, messageRole: DMessage['
       if (messageTyping) {
         return <Avatar
           alt={messageSender} variant='plain'
-          src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'
+          src='https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
           sx={{ ...mascotSx, borderRadius: 8 }}
         />;
       }
